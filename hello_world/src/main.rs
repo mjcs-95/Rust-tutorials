@@ -7,7 +7,11 @@ use std::mem;
 
 use std::env;
 use std::str::FromStr; // useful functions and types for interacting with the
-                       // execution environment, like args for command line arguments
+// execution environment, like args for command line arguments
+
+mod stack_heap;
+
+
 
 fn core_data_types_8() {
     let a: u8 = 123; //unsigned of 8 bits, let makes a inmutable/const
@@ -96,7 +100,6 @@ fn declaring_and_using_constants_11() {
     }
 }
 
-mod stack_heap;
 
 fn gcd(mut n: u64, mut m: u64) -> u64 {
     assert!(n != 0 && m != 0);
