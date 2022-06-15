@@ -7,11 +7,9 @@ use std::mem;
 
 use std::env;
 use std::str::FromStr; // useful functions and types for interacting with the
-// execution environment, like args for command line arguments
+                       // execution environment, like args for command line arguments
 
 mod stack_heap;
-
-
 
 fn core_data_types_8() {
     let a: u8 = 123; //unsigned of 8 bits, let makes a inmutable/const
@@ -96,10 +94,9 @@ fn declaring_and_using_constants_11() {
     println!("{}", Z);
     unsafe {
         // Im telling the compiler to trust me
-        println!("{}", Y);
+        println!("{}", Y); 
     }
 }
-
 
 fn gcd(mut n: u64, mut m: u64) -> u64 {
     assert!(n != 0 && m != 0);
@@ -120,7 +117,7 @@ fn test_gcd() {
     assert_eq!(gcd(2 * 3 * 5 * 11 * 17, 3 * 7 * 11 * 13 * 19), 3 * 11);
 }
 
-fn main() {
+fn greatest_common_divisors() {
     let mut numbers = Vec::new();
     for arg in env::args().skip(1) {
         numbers.push(u64::from_str(&arg).expect("error parsing argument"));
@@ -134,4 +131,9 @@ fn main() {
         d = gcd(d, *m);
     }
     println!("The greatest common divisor of {:?} is {}", numbers, d);
+}
+
+fn main() {
+    
+
 }
